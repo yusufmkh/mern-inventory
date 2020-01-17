@@ -1,0 +1,202 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+///////////////////////////////////
+///////////// NAVBAR //////////////
+.navbar {
+  background-color: #fff;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+
+  display: flex;
+  align-items: center;
+
+  &__home {
+    font-size: 22px;
+    font-weight: 500;
+    color: #555;
+    margin-left: 150px;
+
+    margin-right: auto;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-right: 100px;
+
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    font-size: 16px;
+    text-decoration: none !important;
+    background-color: #0586ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin-right: 20px;
+
+    &:hover {
+      background-color: darken(#0586ff, 5%);
+      color: #fff;
+    }
+  }
+}
+
+///////////////////////////////////
+//////////// HOMEPAGE /////////////
+.homepage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: auto;
+  height: auto;
+  width: 100%;
+  margin-top: 4rem;
+  
+  &__heading {
+    width: 70%;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  &__cta {
+    font-size: 16px;
+    text-decoration: none !important;
+    text-transform: uppercase;
+    background-color: #0586ff;
+    color: #fff;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin-top: 1.2rem;
+    transition: transform .2s;
+    box-shadow: 0 .2rem 1rem rgba(0,0,0, .2);
+
+    &:hover {
+      background-color: darken(#0586ff, 5%);
+      color: #fff;
+      transform: translateY(-.3rem);
+      box-shadow: 0 .5rem 1.5rem rgba(0,0,0, .2);
+    }
+  }
+
+  &__dashboard-photo {
+    display: inline-block;
+    width: 50rem;
+    margin: 5rem auto;
+    border-radius: .3rem;
+    box-shadow: 0 1rem 3rem rgba(0,0,0, .2);
+
+  }
+}
+
+///////////////////////////////////
+///////////// FOOTER //////////////
+.footer {
+  height: 100%;
+  width: 100%;
+  background-color: #eee;
+  color: #555;
+  padding: 2.5rem 0;
+
+  display: flex;
+  justify-content: center;
+
+  &__copy-text {
+    width: 15rem;
+    text-align: center;
+  }
+}
+
+///////////////////////////////////
+/////////// DASHBOARD /////////////
+.dashboard {
+  background-color: #ccc;
+  height: 100vh;
+  display: flex;
+}
+
+.sidebar {
+  background-color: #333;
+  flex: 0 0 17.5%;
+
+  display: flex;
+  flex-direction: column;
+
+  &__welcome {
+    color: #fff;
+    padding: 30px;
+    border-bottom: 1px solid #444;
+  }
+
+  &__list {
+    list-style: none;
+    margin-bottom: auto;
+  }
+
+  &__link {
+    text-decoration: none !important;
+  }
+
+  &__logout {
+    background-color: transparent;
+    text-align: inherit;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__link,
+  &__logout {
+    color: #eeeeee;
+    width: 100%;
+    padding: 15px 30px;
+    
+    display: flex;
+    align-items: center;
+    
+    & span {
+      margin-left: 10px;
+    }
+  }
+
+  &__link:hover,
+  &__logout:hover {
+    background-color: #555;
+    color: #eeeeee;
+  }
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  color: #999;
+  padding: 30px;
+}
+
+.main {
+  background-color: #fff;
+  // margin: 15px;
+  padding: 30px;
+  // box-shadow: 0 10px 40px rgba(0,0,0, .2);
+
+  flex: 1;
+}
