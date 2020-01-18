@@ -7,6 +7,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
+    "install:client": "npm install --prefix client",
     "watch:sass": "npm run watch:sass --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\" \"npm run watch:sass\"",
     "heroku-postbuild": "npm install --prefix client && npm run build --prefix client"
