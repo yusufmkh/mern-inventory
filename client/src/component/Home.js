@@ -15,7 +15,6 @@ class Home extends Component {
             Make your inventory more efficient with your tailored management app
           </h1>
           <Link className="homepage__cta" to="/register">Sign up for free</Link>
-          {/* <div className="homepage__dashboard-photo"></div> */}
           <img src={dashboardImg} alt='Dashboard photo' className='homepage__dashboard-photo' />
         </main>
         <Footer />

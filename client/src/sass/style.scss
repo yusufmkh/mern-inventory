@@ -98,11 +98,10 @@ body {
 
   &__dashboard-photo {
     display: inline-block;
-    width: 50rem;
+    width: 60%;
     margin: 5rem auto;
     border-radius: .3rem;
     box-shadow: 0 1rem 3rem rgba(0,0,0, .2);
-
   }
 }
 
@@ -194,9 +193,54 @@ body {
 
 .main {
   background-color: #fff;
-  // margin: 15px;
   padding: 30px;
-  // box-shadow: 0 10px 40px rgba(0,0,0, .2);
 
   flex: 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .homepage {
+    &__heading {
+      font-size: 32px;
+      width: 85%;
+    }
+  }
+
+  .navbar {
+    padding: 15px 10px;
+  
+    flex-direction: column;
+  
+    &__home {
+      font-size: 32px;
+      font-weight: 500;
+      margin: 10px auto;
+  
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  
+    &__list {
+      margin: 5px auto;
+      margin-top: 10px;
+    }
+  
+    &__link {
+      padding: 8px 30px;
+      
+      &:not(:last-child) {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  .homepage {
+    &__dashboard-photo {
+      width: 90%;
+      margin: 3rem auto;
+      border-radius: .3rem;
+      box-shadow: 0 1rem 3rem rgba(0,0,0, .2);
+    }
+  }
 }

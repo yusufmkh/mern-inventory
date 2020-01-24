@@ -71,7 +71,7 @@ body {
       box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.2); }
   .homepage__dashboard-photo {
     display: inline-block;
-    width: 50rem;
+    width: 60%;
     margin: 5rem auto;
     border-radius: .3rem;
     box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); }
@@ -135,3 +135,29 @@ body {
   background-color: #fff;
   padding: 30px;
   flex: 1; }
+
+@media only screen and (max-width: 500px) {
+  .homepage__heading {
+    font-size: 32px;
+    width: 85%; }
+  .navbar {
+    padding: 15px 10px;
+    flex-direction: column; }
+    .navbar__home {
+      font-size: 32px;
+      font-weight: 500;
+      margin: 10px auto; }
+      .navbar__home:hover {
+        text-decoration: none; }
+    .navbar__list {
+      margin: 5px auto;
+      margin-top: 10px; }
+    .navbar__link {
+      padding: 8px 30px; }
+      .navbar__link:not(:last-child) {
+        margin-right: 10px; }
+  .homepage__dashboard-photo {
+    width: 90%;
+    margin: 3rem auto;
+    border-radius: .3rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.2); } }
