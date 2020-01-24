@@ -20,20 +20,6 @@ class Navbar extends Component {
             </li>
           </ul>
         </nav>
-
-        {/* <nav className="navbar">
-          <a className="navbar-brand ml-5" href="/">Inventory Management</a>
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div className="navbar-nav float-right">
-              {this.props.auth.isAuthenticated ? (<React.Fragment><Link className="nav-item nav-link disabled" to="#" tabindex="-1" aria-disabled="true">{this.props.auth.user.username.toUpperCase()}</Link>
-                <button type="button" className="btn btn-outline-danger" onClick={() => this.props.logout()}>Log Out</button></React.Fragment>) : (<React.Fragment><Link className="nav-item nav-link" to="/login">Login</Link>
-                  <Link className="nav-item nav-link" to="/Register">Register</Link></React.Fragment>)}
-            </div>
-          </div>
-        </nav> */}
       </div>
     )
   }

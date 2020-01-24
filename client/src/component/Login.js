@@ -24,22 +24,13 @@ class Login extends Component {
     e.preventDefault();
 
     this.props.login(this.state)
-    // axios.post('/users/login', this.state)
-    //   .then(res => {
-    //     console.log(res);
-    //     console.log('=========');
-    //     console.log(res.data);
-    //     this.setState({ isAuthenticated: true })
-    //     this.props.loggedState(this.state.isAuthenticated);
-    //   })
-    //   .catch(err => console.log(err))
   }
 
   render() {
     return (
       this.props.auth.isAuthenticated
         ? <Redirect to={{ pathname: '/dashboard' }} />
-        : <div className='container mt-4 w-25'>
+        : <div className='container mt-4' style={{ maxWidth: '400px' }}>
           <h2>Login</h2>
           <hr />
           <form onSubmit={this.handleSubmit}>

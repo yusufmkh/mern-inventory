@@ -25,21 +25,13 @@ class Register extends Component {
     e.preventDefault()
 
     this.props.register(this.state)
-    // axios.post('/users/register', this.state.newUser)
-    //   .then(res => {
-    //     console.log(res);
-    //     console.log('=========');
-    //     console.log(res.data);
-    //     this.setState({ isAuthenticated: true })
-    //   })
-    //   .catch(err => console.log(err))
   }
 
   render() {
     return (
       this.props.auth.isAuthenticated
         ? <Redirect to={{ pathname: '/login' }} />
-        : <div className='container mt-4 w-25'>
+        : <div className='container mt-4' style={{ maxWidth: '400px' }}>
           <h2>Register</h2>
           <hr />
           <form onSubmit={this.handleSubmit}>
