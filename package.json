@@ -16,7 +16,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^3.0.7",
+    "bcrypt": "^5.0.0",
     "concurrently": "^5.0.2",
     "cors": "^2.8.5",
     "dotenv": "^8.2.0",
