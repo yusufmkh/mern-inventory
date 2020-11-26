@@ -19,7 +19,7 @@ export const getProducts = () => dispatch => {
       type: GET_PRODUCTS,
       payload: res.data
     }))
-    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
+    .catch(err => dispatch(returnErrors(err.message)))
 }
 
 export const addProduct = newProduct => dispatch => {
@@ -29,7 +29,7 @@ export const addProduct = newProduct => dispatch => {
       type: ADD_PRODUCT,
       payload: res.data
     }))
-    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
+    .catch(err => dispatch(returnErrors(err.message)))
 }
 
 export const editProduct = product => dispatch => {
@@ -47,14 +47,14 @@ export const cancelEdit = () => dispatch => {
 }
 
 export const updateProduct = updatedProduct => dispatch => {
-
+  console.log(updateProduct)
   axios.post(`/api/products/update/${updatedProduct._id}`, updatedProduct)
     .then(res => dispatch({
       type: UPDATED_PRODUCT,
       payload: res.data
     })
     )
-    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
+    .catch(err => dispatch(returnErrors(err.message)))
 }
 
 export const deleteProduct = id => dispatch => {
@@ -64,5 +64,5 @@ export const deleteProduct = id => dispatch => {
       type: DELETE_PRODUCTS,
       payload: res.data
     }))
-    .catch(err => dispatch(returnErrors(err.response.data, err.response.status)))
+    .catch(err => dispatch(returnErrors(err.message)))
 }

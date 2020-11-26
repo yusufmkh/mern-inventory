@@ -11,7 +11,7 @@ router.route('/').get(chechAuthentication, (req, res) => {
 // Add product
 router.route('/add').post(chechAuthentication, (req, res) => {
   const name = req.body.name;
-  const amount = Number(req.body.amount);
+  const qty = Number(req.body.qty);
   const um = req.body.um;
   const price = Number(req.body.price);
   const weight = Number(req.body.weight);
@@ -20,7 +20,7 @@ router.route('/add').post(chechAuthentication, (req, res) => {
 
   const newProduct = new Product({
     name,
-    amount,
+    qty,
     um,
     price,
     weight,
@@ -54,7 +54,7 @@ router.route('/update/:id').post(chechAuthentication, (req, res) => {
   Product.findById(req.params.id)
     .then(product => {
       product.name = req.body.name;
-      product.amount = Number(req.body.amount);
+      product.qty = Number(req.body.qty);
       product.um = req.body.um;
       product.price = Number(req.body.price);
       product.weight = Number(req.body.weight);

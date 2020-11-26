@@ -1,10 +1,10 @@
 import { GET_ERRORS, CLEAR_ERRORS } from './types'
 
 // return errors
-export const returnErrors = (msg, status, id = null) => {
+export const returnErrors = (msg) => {
   return {
     type: GET_ERRORS,
-    payload: { msg, status, id }
+    payload: msg
   }
 }
 

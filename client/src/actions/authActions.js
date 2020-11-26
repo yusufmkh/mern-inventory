@@ -1,5 +1,4 @@
 import axios from 'axios'
-
 import { returnErrors } from "./errorActions";
 
 import {
@@ -16,19 +15,13 @@ import {
 export const loadUser = () => dispatch => {
   dispatch({ type: USER_LOADING })
 
-  const config = {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }
-
-  axios.get('/api/users/user', config)
+  axios.get('/api/users/user')
     .then(res => dispatch({
       type: USER_LOADED,
       payload: res.data
     }))
     .catch(err => {
-      dispatch(returnErrors(err.response.data, err.response.status))
+      dispatch(returnErrors(err.message))
       dispatch({
         type: AUTH_ERROR
       })
@@ -36,20 +29,16 @@ export const loadUser = () => dispatch => {
 }
 
 export const login = ({ email, password }) => dispatch => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }
-  // const body = JSON.stringify({ email, password })
 
-  axios.post('/api/users/login', { email, password }, config)
-    .then(res => dispatch({
-      type: LOGIN_SUCCESS,
-      payload: res.data
-    }))
+  axios.post('/api/users/login', { email, password })
+    .then(res => {
+      dispatch({
+        type: LOGIN_SUCCESS,
+        payload: res.data
+      })
+    })
     .catch(err => {
-      dispatch(returnErrors(err.response.data, err.response.status))
+      dispatch(returnErrors(err.message))
       dispatch({
         type: LOGIN_FAIL
       })
@@ -57,12 +46,8 @@ export const login = ({ email, password }) => dispatch => {
 }
 
 export const logout = () => dispatch => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }
-  axios.post('/api/users/logout', {}, config)
+
+  axios.post('/api/users/logout')
     .then(() => dispatch({
       type: LOGOUT_SUCCESS
     }))
@@ -70,20 +55,14 @@ export const logout = () => dispatch => {
 }
 
 export const register = ({ username, email, password }) => dispatch => {
-  const config = {
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  }
-  const body = JSON.stringify({ username, email, password })
 
-  axios.post('/api/users/register', body, config)
+  axios.post('/api/users/register', { username, email, password })
     .then(res => dispatch({
       type: REGISTER_SUCCESS,
       payload: res.data
     }))
     .catch(err => {
-      dispatch(returnErrors(err.response.data, err.response.status))
+      dispatch(returnErrors(err.message))
       dispatch({
         type: REGISTER_FAIL
       })
