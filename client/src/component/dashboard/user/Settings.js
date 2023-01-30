@@ -16,8 +16,8 @@ export const Settings = () => {
 
   return (
     <div className='container mt-4'>
-      <h2 style={{ display: 'inline-block', marginRight: '1rem' }}>Setings</h2>
-      <span className='alert alert-warning'>This page is Under Construction</span>
+      <h2 style={{ display: 'inline-block', marginRight: '1rem' }}>Settings</h2>
+      <span className='alert alert-warning'>This page is under construction</span>
       <hr />
       <h4>Edit your account</h4><br />
       <form onSubmit={e => handleSubmit(e)} style={{ maxWidth: '400px' }}>
