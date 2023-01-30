@@ -49,7 +49,7 @@ function chechAuthentication(req, res, next) {
     return next();
   }
 
-  res.status(401).json('User NOT Authorized');
+  res.status(401).json('User NOT authorized');
 }
 
 // Deployment
