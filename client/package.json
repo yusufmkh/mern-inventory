@@ -38,6 +38,6 @@
   },
   "proxy": "http://localhost:5000",
   "devDependencies": {
-    "node-sass": "^7.0.3"
+    "node-sass": "^9.0.0"
   }
 }
