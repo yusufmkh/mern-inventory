@@ -1,10 +1,10 @@
 # Inventory Management App
 
-A simple ***Inventory Management*** web application with a basic CRUD operations and Authentication built using MERN stack.
+A simple ***Inventory Management*** web application with basic CRUD operations and Authentication built using MERN stack.
 
 ![Dashboard](./client/src/images/dashboard.png)
 
-**[Live Demo](https://inventorymt.herokuapp.com)**
+**[Live Demo](https://inventorymt.ysfv.me)**
 
 Account details:
 - Email: test@test.com
