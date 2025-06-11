@@ -4,7 +4,7 @@ A simple ***Inventory Management*** web application with basic CRUD operations a
 
 ![Dashboard](./client/src/images/dashboard.png)
 
-**[Live Demo](https://inventorymt.ysfv.me)**
+_Live Demo is under maintenance..._
 
 Account details:
 - Email: test@test.com
